@@ -39,7 +39,7 @@ spring:
 
         providers:
           - alias: enter-into-dummybot-saml
-            metadata: <your metadata url>
+            metadata: https://login.microsoftonline.com/4f70e8db-56fb-4765-b7c7-75609ad6f5b8/federationmetadata/2007-06/federationmetadata.xml?appid=09af63b1-5c97-43c0-bba6-41a8746514d9
             skip-ssl-validation: true
             link-text: enter-into-dummybot-saml
             authentication-request-binding: urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST
