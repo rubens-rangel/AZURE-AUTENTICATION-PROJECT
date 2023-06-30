@@ -1,6 +1,8 @@
 package com.fztest1.fztest1.saml.security;
 
 import static org.springframework.http.HttpMethod.GET;
+import static org.springframework.http.HttpMethod.POST;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -19,6 +21,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers(GET, "/home").permitAll()
                 .antMatchers(GET, "/api/samlLink").permitAll()
+                .antMatchers(GET, "/saml/sso").permitAll()
+                .antMatchers(POST, "/saml/sso").permitAll()
                 .antMatchers("/**").authenticated()
                 .and()
                 .formLogin().loginPage("/home")
